@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "singularName": "game",
+    "pluralName": "games",
+    "displayName": "game",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "platform": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::platform.platform"
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true
+    },
+    "descuento": {
+      "type": "integer"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "video": {
+      "type": "string",
+      "required": true
+    },
+    "portada": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "fondo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "galeria": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "fecha": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

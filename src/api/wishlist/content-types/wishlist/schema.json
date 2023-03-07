@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wishlists",
+  "info": {
+    "singularName": "wishlist",
+    "pluralName": "wishlists",
+    "displayName": "wishlist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "nombre": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::game.game"
+    }
+  }
+}

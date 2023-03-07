@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "singularName": "address",
+    "pluralName": "addresses",
+    "displayName": "address"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "ciudad": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "string",
+      "required": true
+    },
+    "codigo_postal": {
+      "type": "string",
+      "required": true
+    },
+    "telefono": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
